@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @since 2022/2/18 5:07 PM
  */
 @ThreadSafe
-public class AtomicPseudoRandom extends PseudoRandom {
+public class AtomicPseudoRandom  {
     private AtomicInteger seed;
 
     AtomicPseudoRandom(int seed) {
@@ -25,5 +25,9 @@ public class AtomicPseudoRandom extends PseudoRandom {
                 return remainder > 0 ? remainder : remainder + n;
             }
         }
+    }
+
+    private int calculateNext(int s) {
+        return 0;
     }
 }
